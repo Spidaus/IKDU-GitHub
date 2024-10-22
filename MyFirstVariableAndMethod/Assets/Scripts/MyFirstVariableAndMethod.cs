@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MyFirstVariableAndMethod : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Method that increases the player's age by 1 year
+    void IncreaseAge(int currentAge)
     {
-        
+        int newAge = currentAge + 1;
+        Debug.Log("New Age after 1 year: " + newAge);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Testing the method in Unity
+    void Start()
     {
-        
+        int playerAge = 23;
+        IncreaseAge(playerAge); // Should log 26
     }
 }
